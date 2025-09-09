@@ -80,9 +80,7 @@ After we inserted the money now we have a balance of 1000 cents
 <img width="711" height="362" alt="image" src="https://github.com/user-attachments/assets/40bee921-f6cd-4046-b6fd-ac49adb0a6b9" />
 
 ### Print the ticket
-<img width="707" height="486" alt="image" src="https://github.com/user-attachments/assets/cd25ec18-6334-48b2-963d-ff7c39255839" />
-
-Succesfully printed out  ticket
+Succesfully printed out 3 ticket
 <img width="705" height="616" alt="image" src="https://github.com/user-attachments/assets/70a7e258-cf87-47d9-86fc-79972b5a4d1e" />
 
 Our balance now decrease and we can see the total amount of money that we spent
