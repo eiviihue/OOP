@@ -1,6 +1,42 @@
-Training my typewriting skill & installation tools for OOP
+WPM & installation tools for OOP
 
-1st day
-<img width="1823" height="603" alt="Screenshot 2025-09-02 144152" src="https://github.com/user-attachments/assets/7ec48f01-22a2-433a-bcf6-e925d6b956c3" />
+Current WPM as of 09/09/2025
+<img width="1911" height="690" alt="image" src="https://github.com/user-attachments/assets/992eeb86-a6ce-47cd-9535-75a0d13cb0d9" />
 
-<img width="827" height="281" alt="image" src="https://github.com/user-attachments/assets/d12533e3-7711-448d-b3e1-b949a5d84149" />
+BlueJ Installation and Testing
+```
+ /**  
+  * Bagian dari Project Hello World, untuk latihan 1  
+  *  
+  * @author (Fajar Baskoro)  
+  * @version (0.1/20180903)  
+  */  
+ public class Helloworld1  
+ {  
+   // instance variables - replace the example below with your own  
+   private int x;  
+   /**  
+    * Constructor for objects of class Helloworld1  
+    */  
+   public Helloworld1()  
+   {  
+     // initialise instance variables  
+     x = 0;  
+     System.out.print("Hello World - Selamat Datang");  
+   }  
+   /**  
+    * An example of a method - replace this comment with your own  
+    *  
+    * @param y a sample parameter for a method  
+    * @return  the sum of x and y  
+    */  
+   public int sampleMethod(int y)  
+   {  
+     // put your code here  
+     return x + y;  
+   }  
+ }  
+```
+
+<img width="1174" height="882" alt="image" src="https://github.com/user-attachments/assets/4350e121-65f2-4c7f-8af2-3f3397ae98d0" />
+
