@@ -1,6 +1,7 @@
 Current WPM as of 09/09/2025
 
-<img width="839" height="326" alt="image" src="https://github.com/user-attachments/assets/500c268b-945c-45fb-84cd-46a201659bb9" />
+<img width="1642" height="637" alt="image" src="https://github.com/user-attachments/assets/76edafef-4910-4448-ab14-8101d5e6e7e2" />
+
 
 BlueJ testing
 ```
