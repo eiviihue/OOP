@@ -1,3 +1,38 @@
+Ringkasan Isi
+
+Berdasarkan nama dan konteks (Clock.md dalam folder OOP), kemungkinan besar file ini menjelaskan tentang kelas (class) Clock dalam paradigma Object Oriented Programming. Biasanya meliputi:
+
+gambaran umum fungsi kelas Clock
+
+atribut (properties) yang dimiliki, seperti jam, menit, detik
+
+method (fungsi/metode) apa saja yang tersedia, seperti:
+
+setTime(...)
+
+tick() atau nextSecond()
+
+toString() atau display()
+
+aturan validasi waktu (misalnya menit < 60, detik < 60, jam dalam format 0-23 atau 1-12 tergantung sistem)
+
+contoh penggunaan kelas: membuat objek Clock, mengubah waktu, mencetak waktu
+
+Penjelasan Tambahan
+
+Berikut beberapa aspek yang bisa diperjelas atau ditambahkan dalam dokumentasi agar lebih baik:
+
+Bagian	Penjelasan / Saran Tambahan
+Format Waktu	Perjelas apakah jam menggunakan format 24-jam atau 12-jam; jika ada AM/PM jika pakai 12-jam.
+Validasi	Sebutkan bagaimana jika nilai yang diberikan tidak valid (misalnya menit 75, detik -5): apakah dilempar error/exception, dibulatkan, atau diabaikan.
+Tick / Pergerakan Waktu	Jelaskan metode yang menaikkan satuan waktu (detik → menit → jam), dan apa yang terjadi kalau lewat batas (misalnya detik dari 59 ke 0 → menit bertambah).
+Pengaturan Zona Waktu (Opsional)	Jika dikembangkan, bisa tambah dukungan zona waktu, standar UTC vs lokal, sinkronisasi waktu, dst.
+Immutability vs Mutability	Apakah objek Clock bisa diubah (setTime, tick) atau setelah dibuat tetap (immutable)? Itu berdampak bagaimana pengguna memakai kelas.
+Representasi String	Bagaimana format toString atau metode serupa: “HH:MM:SS”, apakah ada leading zero (05:03:09 vs 5:3:9); apakah ada label AM/PM.
+Edge Cases	Contoh kasus-kasus batas, misalnya: waktu 23:59:59 + satu detik → 00:00:00. Juga apa yang terjadi jika dipasang waktu dengan input invalid.
+Penggunaan Example / Demo	Bagian contoh kode pemakaian bisa ditampilkan: membuat objek, merubah waktu, memanggil tick, menampilkan waktu. Memudahkan pemahaman.
+Keamaan & Error Handling	Bagaimana kelas ini menangani input yang salah, apakah ada pengecekan dan exception, atau hanya print pesan error, atau ignore.
+
 Source code:
 
 NumberDisplay.java
