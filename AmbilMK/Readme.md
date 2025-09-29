@@ -16,7 +16,7 @@ Aplikasi ini mensimulasikan proses pengambilan mata kuliah oleh mahasiswa di Dep
 ├── dosen.java # Class untuk menyimpan data dosen
 ├── matakuliah.java # Class untuk menyimpan data mata kuliah dan pengampu
 ├── mahasiswa.java # Class untuk input data mahasiswa
-└── mainapp.java # Class utama (entry point) untuk menjalankan program
+└── main.java # Class utama (entry point) untuk menjalankan program
 ```
 
 Cara Kerja Program
