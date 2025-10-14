@@ -1,71 +1,76 @@
-package monstermart;
-
-import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class VendingMachine {
-    private List<Product> products;
+    private ArrayList<Product> products = new ArrayList<>();
+    private int transactionCount = 0;
 
     public VendingMachine() {
-        this.products = Product.getProductList();
-    }
-
-    public void displayMenu() {
-        System.out.println("Welcome to the Vending Machine!");
-        System.out.println("Available Products:");
-        for (int i = 0; i < products.size(); i++) {
-            Product p = products.get(i);
-            System.out.println(
-                    (i + 1) + ". " + p.getName() + " - Price: " + p.getPrice() + " (Stock: " + p.getStock() + ")");
-        }
+        products.add(new Product("Biskuat", 5000, 5));
+        products.add(new Product("SilverQueen", 18000, 8));
+        products.add(new Product("Lays", 13000, 4));
+        products.add(new Product("MrPotato", 12000, 5));
+        products.add(new Product("Yupi", 8500, 7));
     }
 
     public void start() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
+        int choice;
+
         while (true) {
-            displayMenu();
-            System.out.print("Select a product (enter number, or 0 to exit): ");
-            int choice = scanner.nextInt();
+            System.out.println("\n=== MONSTERMART SNACK VENDING MACHINE ===");
+            for (int i = 0; i < products.size(); i++) {
+                Product p = products.get(i);
+                System.out.println((i + 1) + ". " + p.getName());
+            }
+            System.out.println("0. Keluar");
+            System.out.print("Pilih produk: ");
+            choice = sc.nextInt();
 
             if (choice == 0) {
+                System.out.println("Terima kasih telah menggunakan mesin ini!");
+                Product.showLog();
                 break;
             }
 
-            if (choice > 0 && choice <= products.size()) {
-                Product selectedProduct = products.get(choice - 1);
-                if (selectedProduct.getStock() > 0) {
-                    handleTransaction(scanner, selectedProduct);
-                } else {
-                    System.out.println("Sorry, this product is out of stock.");
-                    notifyAdmin(selectedProduct);
-                }
-            } else {
-                System.out.println("Invalid selection. Please try again.");
+            if (choice < 1 || choice > products.size()) {
+                System.out.println("Pilihan tidak valid!");
+                continue;
             }
-        }
-        scanner.close();
-    }
 
-    private void handleTransaction(Scanner scanner, Product product) {
-        System.out.println("You have selected: " + product.getName());
-        System.out.println("Total price: " + product.getPrice());
-        System.out.print("Enter payment amount: ");
-        int payment = scanner.nextInt();
-
-        if (payment >= product.getPrice()) {
-            product.decreaseStock();
-            int change = payment - product.getPrice();
-            System.out.println("Thank you for your purchase! Your change is: " + change);
-            Product.logTransaction(product.getName(), product.getPrice());
-            if (product.getStock() == 0) {
-                notifyAdmin(product);
+            Product selected = products.get(choice - 1);
+            if (selected.getStock() == 0) {
+                System.out.println("Maaf, stok " + selected.getName() + " habis!");
+                System.out.println("Administrator telah diberitahu untuk segera merefill produk ini");
+                continue;
             }
-        } else {
-            System.out.println("Insufficient payment. Transaction cancelled.");
-        }
-    }
 
-    private void notifyAdmin(Product product) {
-        System.out.println("ADMIN ALERT: Product '" + product.getName() + "' is out of stock. Please refill.");
+            System.out.println("Tekan 0 untuk membatalkan pembelian atau 1 untuk melanjutkan");
+            int input = sc.nextInt();
+            if (input == 0) {
+                System.out.println("Pembelian dibatalkan.");
+                continue;
+            }
+            
+            System.out.println("Total harga: Rp" + selected.getPrice());
+            System.out.print("Masukkan uang Anda: Rp");
+            int money = sc.nextInt();
+
+            for (int i = 0; money < selected.getPrice(); i++) {
+                System.out.println("Uang tidak cukup. Silakan tambahkan uang");
+                money += sc.nextInt();
+            }
+
+            int change = money - selected.getPrice();
+            selected.reduceStock();
+            transactionCount++;
+            Product.addTransaction(transactionCount, selected);
+
+            System.out.println("Membeli " + selected.getName() + "...");
+            System.out.println("Kembalian Anda: Rp" + change);
+            System.out.println("Terima kasih atas pembelian Anda!");
+        }
+
+        sc.close();
     }
 }
