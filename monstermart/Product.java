@@ -1,21 +1,11 @@
-package monstermart;
-
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.List;
+ import java.util.ArrayList;
 
 public class Product {
-    private static final String LOG_FILE = "transaction_log.txt";
-    private static final DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
-    private static List<Product> productList = new ArrayList<>();
-
     private String name;
     private int price;
     private int stock;
+
+    private static ArrayList<String> transactionLog = new ArrayList<>();
 
     public Product(String name, int price, int stock) {
         this.name = name;
@@ -28,13 +18,25 @@ public class Product {
     }
 
     public int getPrice() {
+        return price;
+    }
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "name='" + name + '\'' +
-                ", price=" + price +
-                ", stock=" + stock +
-                '}';
+    public int getStock() {
+        return stock;
+    }
+
+    public void reduceStock() {
+        if (stock > 0) stock--;
+    }
+
+    public static void addTransaction(int transactionNo, Product p) {
+        transactionLog.add("Transaksi #" + transactionNo + ": " + p.getName() + " - Rp" + p.getPrice());
+    }
+
+    public static void showLog() {
+        System.out.println("\n=== LOG TRANSAKSI ===");
+        for (String log : transactionLog) {
+            System.out.println(log);
+        }
     }
 }
