@@ -1,3 +1,6 @@
+### Penjelasan Kode dan Menjalankannya
+[MonsterMart Snack Vending Machine-Rafi Aqila Maulana](https://youtu.be/SBCxXoMLpro?si=bsflJ76e9DmDWdq4)
+
 ## Rancangan Class
 <img width="1915" height="934" alt="image" src="https://github.com/user-attachments/assets/5231a4bb-874a-4cbb-b798-583346dbf1c5" />
 
