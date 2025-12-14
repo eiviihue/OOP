@@ -18,62 +18,17 @@ ImageViewer adalah aplikasi desktop sederhana yang memungkinkan pengguna membuka
 - **Informasi**: Tampilkan versi aplikasi dan informasi tentang.
 - **Status Bar**: Menampilkan status operasi dan nama file.
 
-## Persyaratan
-
-- Java Development Kit (JDK) versi 8 atau lebih tinggi (karena menggunakan Swing).
-- Sistem operasi yang mendukung Java Swing (Windows, macOS, Linux).
-
-## Cara Menjalankan
-
-1. **Pastikan File Java Ada**:
-   - File utama: `ImageViewer.java`, `ImagePanel.java`, `ImageFileManager.java`, `OFImage.java`.
-
-2. **Compile Kode**:
-   - Buka terminal dan navigasi ke direktori proyek (misalnya: `e:\pbo\GUI\`).
-   - Jalankan perintah untuk mengkompilasi semua file Java:
-     ```
-     javac *.java
-     ```
-
-3. **Jalankan Aplikasi**:
-   - Setelah kompilasi berhasil, jalankan aplikasi dengan:
-     ```
-     java ImageViewer
-     ```
-
-4. **Menggunakan Aplikasi**:
-   - Gunakan menu **File > Open** untuk membuka gambar.
-   - Terapkan filter dari menu **Filter**.
-   - Lihat status di bagian bawah jendela.
-
 ## Contoh Penggunaan
 
-- Buka aplikasi: Jendela utama muncul dengan menu bar.
-- Pilih **File > Open**: Pilih file gambar (misalnya, .jpg atau .png).
-- Gambar ditampilkan di panel tengah.
-- Klik **Filter > Darker**: Gambar menjadi lebih gelap, status diperbarui.
-- Klik **File > Close**: Gambar dihapus.
-- Klik **File > Quit**: Aplikasi ditutup.
+https://github.com/user-attachments/assets/4eb0bc55-ba30-46c6-bbfd-ee9715e40bd3
 
 ## Struktur Kode
+
+<img width="1173" height="680" alt="image" src="https://github.com/user-attachments/assets/a0f2ee8d-374d-484b-861d-8ee69de06581" />
+
 
 - **ImageViewer.java**: Kelas utama yang membuat GUI, menangani menu, dan mengelola gambar.
 - **ImagePanel.java**: Panel khusus untuk menampilkan gambar.
 - **ImageFileManager.java**: Utility untuk memuat gambar dari file.
 - **OFImage.java**: Kelas gambar kustom dengan metode filter (darker, lighter, threshold).
 
-## Pengembangan Lanjutan
-
-Aplikasi ini dapat diperluas dengan:
-- Menambah filter baru (misalnya, blur, sharpen).
-- Mendukung lebih banyak format gambar.
-- Menambahkan fitur save gambar yang telah difilter.
-- Integrasi dengan drag-and-drop untuk membuka file.
-
-## Lisensi
-
-Proyek ini berdasarkan contoh dari buku "Objects First with Java" oleh Michael Kolling dan David J. Barnes. Dapat digunakan untuk tujuan pendidikan.
-
-## Kontribusi
-
-Silakan fork dan berkontribusi dengan fitur baru atau perbaikan bug.
