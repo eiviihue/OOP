@@ -13,35 +13,11 @@ Pong adalah game arkade sederhana di mana dua pemain (atau satu pemain melawan A
 - **Scoring**: Skor diperbarui ketika bola melewati paddle lawan.
 - **Game Loop**: Loop permainan yang menangani pembaruan posisi dan rendering.
 - **GUI Sederhana**: Jendela game dengan panel untuk menampilkan elemen game.
-
-## Persyaratan
-
-- Java Development Kit (JDK) versi 8 atau lebih tinggi.
-- Sistem operasi yang mendukung Java GUI (Windows, macOS, Linux).
-
-## Cara Menjalankan
-
-1. **Pastikan File Java Ada**:
-   - File utama: `Game.java`, `Ball.java`, `Paddle.java`, `GamePanel.java`, `GameFrame.java`.
-
-2. **Compile Kode**:
-   - Buka terminal dan navigasi ke direktori proyek (misalnya: `e:\pbo\Pong\`).
-   - Jalankan perintah untuk mengkompilasi semua file Java:
-     ```
-     javac *.java
-     ```
-
-3. **Jalankan Game**:
-   - Setelah kompilasi berhasil, jalankan game dengan:
-     ```
-     java Game
-     ```
-
-4. **Bermain**:
-   - Gunakan kontrol keyboard untuk menggerakkan paddle.
-   - Cobalah untuk memantulkan bola dan dapatkan skor tertinggi.
+ Cobalah untuk memantulkan bola dan dapatkan skor tertinggi.
 
 ## Contoh Gameplay
+
+https://github.com/user-attachments/assets/508a6b01-dabd-4c83-9a69-6797b06993b3
 
 - Jendela game muncul.
 - Bola mulai bergerak dari tengah.
@@ -50,24 +26,10 @@ Pong adalah game arkade sederhana di mana dua pemain (atau satu pemain melawan A
 
 ## Struktur Kode
 
+<img width="1578" height="935" alt="image" src="https://github.com/user-attachments/assets/d19fbde2-05c1-45a2-97da-a9609074cda5" />
+
 - **Game.java**: Kelas utama yang memulai game dan mengelola loop utama.
 - **GameFrame.java**: Membuat jendela utama game.
 - **GamePanel.java**: Panel yang menangani rendering dan input.
 - **Ball.java**: Mewakili bola dengan posisi, kecepatan, dan logika gerakan.
 - **Paddle.java**: Mewakili paddle pemain dengan kontrol gerakan.
-
-## Pengembangan Lanjutan
-
-Game ini dapat diperluas dengan:
-- Menambahkan AI untuk pemain lawan.
-- Fitur multiplayer jaringan.
-- Efek suara dan musik.
-- Level atau mode berbeda.
-
-## Lisensi
-
-Proyek ini adalah contoh sederhana dan dapat digunakan untuk tujuan pendidikan atau pribadi.
-
-## Kontribusi
-
-Silakan fork dan berkontribusi dengan fitur baru atau perbaikan bug.
